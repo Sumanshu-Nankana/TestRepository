@@ -1,6 +1,6 @@
-userid,input_file,output_file
-1,input1.file1,output1.file1
-2,input2.file2,output2.file2
-3,input3.file3,output3.file3
-4,input4.file4,output4.file4
-5,input5.file5,output5.file5
+userid,input_file,output_file,inp_job,status_code,out_job,status_code.1
+1,input1.file1,output1.file1,INPJB01,,OUTJB02,
+2,input2.file2,output2.file2,INPJB11,,OUTJB12,
+3,input3.file3,output3.file3,INPJB21,,OUTJB22,
+4,input4.file4,output4.file4,INPJB31,,OUTJB32,
+5,input5.file5,output5.file5,INPJB41,,OUTJB42,

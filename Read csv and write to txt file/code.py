@@ -40,17 +40,28 @@ def create_jcl():
 
         # iterate over sample input file and write to new file
         for line in input_file:
-            if 'PKM.TR.SOURCE.B8' in line:
+            if 'INPJB000' in line:
+                inpjb_name = 'INPJB' + str(idx) + '1'
+                inp_file.write(line.replace('INPJB000',inpjb_name))
+                df.loc[idx,'inp_job'] = inpjb_name
+            elif 'PKM.TR.SOURCE.B8' in line:
                 inp_file.write(line.replace('PKM.TR.SOURCE.B8',input_val))
             else:
                 inp_file.write(line)
 
         # iterate over sample output file and write to new file
         for line in output_file:
-            if 'KM.TR.SOURCE.B9' in line:
+            if 'OUTJB000' in line:
+                outjb_name = 'OUTJB' + str(idx) + '2'
+                out_file.write(line.replace('OUTJB000',outjb_name))
+                df.loc[idx,'out_job'] = outjb_name
+            elif 'KM.TR.SOURCE.B9' in line:
                 out_file.write(line.replace('PKM.TR.SOURCE.B9',output_val))
             else:
                 out_file.write(line)
+        
+        # update the same excel with job-names in columns
+        df.to_csv('sample_excel.csv',index=False)
 
         # close all the files
         input_jcl.close()
