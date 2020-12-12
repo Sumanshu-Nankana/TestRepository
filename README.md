@@ -22,3 +22,4 @@
  
  - use **  for BOLD
  - use * for Italic
+ - use - for bullets
