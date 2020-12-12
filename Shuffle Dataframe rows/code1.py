@@ -10,16 +10,16 @@ def shuffle_df_one_col(col):
     df_c1 = pd.DataFrame(df[col])
     df = df.drop([col],axis=1)
     df_c1.dropna(inplace=True)
-    df2 = df_c1.sample(frac=1).reset_index(drop=True)
-
+    df_c1[col] = df_c1[col].sample(frac=1).values
+    
     for i in nan_index:
         line = pd.DataFrame({col: np.nan}, index=[i-1])
-        df2 = df2.append(line, ignore_index=False)
-        df2 = df2.sort_index().reset_index(drop=True)
-
-    final_df = pd.concat([df,df2],axis=1)
-    final_df = final_df[cols]
-    final_df.to_csv('shuffle1.csv',index=False)
+        df_c1 = df_c1.append(line, ignore_index=False)
+        df_c1 = df_c1.sort_index().reset_index(drop=True)
+    print(df_c1)
+    df = pd.concat([df,df_c1],axis=1)
+    df = df[cols]
+    df.to_csv('shuffle1.csv',index=False)
 
 # pass any columns which we want to shuffle
-shuffle_df_one_col(col)
+shuffle_df_one_col('C1')
