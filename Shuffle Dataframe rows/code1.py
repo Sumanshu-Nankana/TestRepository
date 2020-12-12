@@ -15,8 +15,7 @@ def shuffle_df_one_col(col):
     for i in nan_index:
         line = pd.DataFrame({col: np.nan}, index=[i-1])
         df_c1 = df_c1.append(line, ignore_index=False)
-        df_c1 = df_c1.sort_index().reset_index(drop=True)
-    print(df_c1)
+    df_c1 = df_c1.sort_index().reset_index(drop=True)
     df = pd.concat([df,df_c1],axis=1)
     df = df[cols]
     df.to_csv('shuffle1.csv',index=False)
