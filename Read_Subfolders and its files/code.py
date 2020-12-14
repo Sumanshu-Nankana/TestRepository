@@ -21,13 +21,14 @@ def read_subfolders_and_files(path):
     with open('output.csv','w') as f:
         for key,val in dic.items():
             fldr_name = key.split('/')[-1]
-            for i in range(len(val)-1):
+            for i in range(len(val)):
                 file_name = val[i]
-                file_path = os.path.join(key,val[i])
-                with open(file_path) as temp:
-                    header = temp.readline()
-                    line = fldr_name + ',' + file_name + ',' + header + '\n'
-                    f.write(line)
+                if file_name != '.ipynb_checkpoints':
+                    file_path = os.path.join(key,val[i])
+                    with open(file_path) as temp:
+                        header = temp.readline()
+                        line = fldr_name + ',' + file_name + ',' + header + '\n'
+                        f.write(line)
     df = pd.read_csv('output.csv', header=None)
     df.to_csv('output.csv',index=False)
 
