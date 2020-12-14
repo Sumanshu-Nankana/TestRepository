@@ -18,6 +18,9 @@
    
 6) **Bootstrap Modal - Pop-up window on click of button**
 https://github.com/Sumanshu-Nankana/TestRepository/tree/master/SignUp%20popup%20window%20on%20button%20click
+
+7) **Read Subfolders and it's files**
+https://github.com/Sumanshu-Nankana/TestRepository/tree/master/Read_Subfolders%20and%20its%20files
    
    
    
