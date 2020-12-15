@@ -22,8 +22,8 @@ https://github.com/Sumanshu-Nankana/TestRepository/tree/master/SignUp%20popup%20
 7) **Read Subfolders and it's files**
 https://github.com/Sumanshu-Nankana/TestRepository/tree/master/Read_Subfolders%20and%20its%20files
 
-8) **Read csv rows and write to txt file**
-https://github.com/Sumanshu-Nankana/TestRepository/tree/master/Read%20csv%20row%20and%20write%20to%20txt
+8) **Read csv each row and write to new txt file**
+https://github.com/Sumanshu-Nankana/TestRepository/tree/master/Read%20csv%20each%20row%20and%20write%20to%20new%20txt
    
    
    
