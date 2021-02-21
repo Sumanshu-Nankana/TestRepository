@@ -26,6 +26,7 @@ https://github.com/Sumanshu-Nankana/TestRepository/tree/master/Read_Subfolders%2
 https://github.com/Sumanshu-Nankana/TestRepository/tree/master/Read%20csv%20each%20row%20and%20write%20to%20new%20txt
 
 9) **Generate Random Number and Queries**
+https://github.com/Sumanshu-Nankana/TestRepository/tree/master/Generate%20Queries
    
    
    
