@@ -1,4 +1,3 @@
-import time
 class TestFunction():
 
     def __init__(self, start, end):
