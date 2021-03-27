@@ -36,12 +36,12 @@ class NameData:
         self.finalDf['Last_Name'].iloc[idx] = temp[-1]
         self.finalDf['Middle_Name'].iloc[idx] = ' '.join(str for str in temp[1:len(temp)-1])
 
+    firstName_df = self.finalDf['First_Name'].dropna().drop_duplicates().reset_index(drop=True)
     middleName_df = self.finalDf['Middle_Name'].dropna().drop_duplicates().reset_index(drop=True)
     lastName_df = self.finalDf['Last_Name'].dropna().drop_duplicates().reset_index(drop=True)
-    tempDf = pd.concat([middleName_df, lastName_df], axis=1).reset_index(drop=True)
+    tempDf =  pd.concat([firstName_df, middleName_df, lastName_df], axis=1).reset_index(drop=True)
     output = pd.concat([self.finalDf, tempDf], axis=1).reset_index(drop=True)
     output.to_csv('output.csv', index=False)
-    print(output)
 
 
 sample_file = 'sample_names.csv'
